@@ -1,0 +1,18 @@
+
+public class Poupanca {
+	private int numeroDaAgencia;
+	private int numeroDaPoupanca;
+	private double saldo;
+	
+	public void sacar() {
+		
+	};
+	
+	public void depositar() {
+			
+	};
+		
+	public void transferir() {
+			
+	};
+}

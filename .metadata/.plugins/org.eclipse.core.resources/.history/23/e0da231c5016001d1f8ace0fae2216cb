@@ -1,0 +1,12 @@
+
+public class Poupanca extends Conta{
+	
+	private static int SEQUENCIAL = 1;
+	
+
+	public Poupanca() {
+		super.numeroDaAgencia = AGENCIAPADRAO;
+		super.numeroDaConta = SEQUENCIAL++;
+	}
+
+}

@@ -1,0 +1,67 @@
+
+public abstract class Conta implements Iconta {
+	
+	
+	private static final int AGENCIAPADRAO = 1;
+	private static int SEQUENCIAL = 1;
+	
+	protected int numeroDaAgencia;
+	protected int numeroDaConta;
+	protected double saldo;
+	protected Cliente cliente;
+	
+	public Conta(Cliente cliente) {
+		this.numeroDaAgencia = AGENCIAPADRAO;
+		this.numeroDaConta = SEQUENCIAL++;
+		this.cliente = cliente;
+	}
+	
+	
+
+	public int getNumeroDaAgencia() {
+		return numeroDaAgencia;
+	}
+
+	public int getNumeroDaConta() {
+		return numeroDaConta;
+	}
+
+	public double getSaldo() {
+		return saldo; 
+	}
+ 
+	
+	//implementacao da interface
+	@Override
+	public void sacar(double valor) {
+		saldo = saldo - valor;
+		// ou como "saldo -= valor;"
+		
+	}
+
+	@Override
+	public void depositar(double valor) {
+		saldo = saldo + valor;
+		// ou como "saldo += valor;"
+	}
+
+	@Override
+	public void transferir(double valor, Conta contaDestino) {
+		this.sacar(valor);
+		contaDestino.depositar(valor);
+		
+	}
+
+	protected void imprimirMetodosDoExtrato() {
+		System.out.println(String.format("Titular: %s", this.cliente.getNomeDoCliente()));
+		System.out.println(String.format("Agencia: %d", this.numeroDaAgencia));
+		System.out.println(String.format("Conta: %d", this.numeroDaConta));
+		System.out.println(String.format("Saldo: %.2f", this.saldo));
+	}
+
+	public void imprimirExtrato() {
+		// TODO Auto-generated method stub
+		
+	};
+	
+}

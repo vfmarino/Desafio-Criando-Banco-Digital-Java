@@ -1,0 +1,37 @@
+
+public class main {
+
+	public static void main(String[] args) {
+		Cliente victor = new Cliente();
+		victor.setNomeDoCliente("Victor");
+		
+		Cliente joao = new Cliente();
+		joao.setNomeDoCliente("João");
+		
+		Cliente marina = new Cliente();
+		marina.setNomeDoCliente("Marina");
+		
+		Conta cc = new ContaCorrente(marina);
+		cc.depositar(300);
+		
+		Conta cc1 = new ContaCorrente(victor);
+		cc.depositar(500);
+		
+		Conta cc2 = new Poupanca(joao);
+		cc.depositar(200);
+		
+		
+		Conta pp = new Poupanca(joao);
+		
+		
+		cc.transferir(82, pp);
+		
+		
+		cc.imprimirExtrato();
+		cc1.imprimirExtrato();
+		cc2.imprimirExtrato();
+		pp.imprimirExtrato();
+
+	}
+
+}

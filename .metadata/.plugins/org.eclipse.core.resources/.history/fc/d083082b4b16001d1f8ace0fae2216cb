@@ -1,0 +1,20 @@
+
+public class ContaCorrente {
+	public int numeroDaAgencia;
+	public int numeroDaContaCorrente;
+	public double saldo;
+	
+	public void sacar() {
+		
+	};
+	
+	public void depositar() {
+			
+	};
+		
+	public void transferir() {
+			
+	};
+	
+	
+}

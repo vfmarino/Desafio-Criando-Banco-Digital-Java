@@ -1,0 +1,6 @@
+
+public class Poupanca {
+	public int numeroDaAgencia;
+	public int numeroDaPupanca;
+	public double saldo;
+}

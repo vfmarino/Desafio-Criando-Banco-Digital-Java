@@ -1,0 +1,31 @@
+
+public class Conta {
+	private int numeroDaAgencia;
+	private int numeroDaConta;
+	private double saldo;
+	
+	public void sacar() {
+		
+	};
+	
+	public void depositar() {
+			
+	};
+		
+	public void transferir() {
+			
+	}
+
+	public int getNumeroDaAgencia() {
+		return numeroDaAgencia;
+	}
+
+	public int getNumeroDaConta() {
+		return numeroDaConta;
+	}
+
+	public double getSaldo() {
+		return saldo; 
+	};
+	
+}

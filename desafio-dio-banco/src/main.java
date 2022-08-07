@@ -1,0 +1,43 @@
+
+public class main {
+
+	public static void main(String[] args) {
+		Cliente victor = new Cliente();
+		victor.setNomeDoCliente("Victor");
+		
+		Cliente joao = new Cliente();
+		joao.setNomeDoCliente("João");
+		
+		Cliente marina = new Cliente();
+		marina.setNomeDoCliente("Marina");
+		
+		Conta cc = new ContaCorrente(marina);
+		cc.depositar(300);
+		
+		Conta cc1 = new ContaCorrente(victor);
+		cc1.depositar(500);
+		
+		Conta pp = new Poupanca(joao);
+		pp.depositar(200);
+		
+		cc.imprimirExtrato();
+		cc1.imprimirExtrato();
+		pp.imprimirExtrato();
+		
+		System.out.println("Marina Tranferio 82 Reais para João e seu novo saldo é:");		
+		cc.transferir(82, pp);
+		
+		cc.imprimirExtrato();
+		
+		System.out.println("João Recebeu 82 Reais por Transferencia de Marina e seu novo saldo é:");
+		pp.imprimirExtrato();
+		
+		
+		System.out.println("Victor Sacou 100 Reais seu novo saldo é:");
+		cc1.sacar(100);
+		
+		cc1.imprimirExtrato();
+
+	}
+
+}

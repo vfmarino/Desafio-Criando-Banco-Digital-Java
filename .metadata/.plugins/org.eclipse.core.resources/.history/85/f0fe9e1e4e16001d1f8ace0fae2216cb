@@ -1,0 +1,21 @@
+
+public class Conta implements Iconta {
+	private int numeroDaAgencia;
+	private int numeroDaConta;
+	private double saldo;
+	
+	
+
+	public int getNumeroDaAgencia() {
+		return numeroDaAgencia;
+	}
+
+	public int getNumeroDaConta() {
+		return numeroDaConta;
+	}
+
+	public double getSaldo() {
+		return saldo; 
+	};
+	
+}

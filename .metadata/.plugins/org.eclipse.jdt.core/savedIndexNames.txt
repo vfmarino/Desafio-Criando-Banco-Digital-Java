@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\vf_ma\Documents\bootcamp santander\ARQUIVO DO DESAFIO\DESAFIO BANCO DIGITAL JAVA\.metadata\.plugins\org.eclipse.jdt.core
+3598367549.index
+1907591793.index
+1865797976.index
